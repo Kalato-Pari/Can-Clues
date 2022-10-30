@@ -1,0 +1,197 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "can clues",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "continuar",
+            "acepto",
+            "aceptar",
+            "confirmar",
+            "sí",
+            "si"
+          ]
+        },
+        {
+          "name": "ObjetoIntent",
+          "slots": [
+            {
+              "name": "objetoUno",
+              "type": "Objetos",
+              "samples": [
+                "{objetoUno}"
+              ]
+            },
+            {
+              "name": "objetoDos",
+              "type": "Objetos",
+              "samples": [
+                "{objetoDos}"
+              ]
+            },
+            {
+              "name": "objetoTres",
+              "type": "Objetos",
+              "samples": [
+                "{objetoTres}"
+              ]
+            }
+          ],
+          "samples": [
+            "{objetoUno} {objetoDos}",
+            "{objetoUno}",
+            "{objetoUno} {objetoDos} y {objetoTres}",
+            "{objetoUno} {objetoDos} {objetoTres}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "1",
+              "name": {
+                "value": "cuerda"
+              }
+            },
+            {
+              "id": "2",
+              "name": {
+                "value": "rompe candados"
+              }
+            },
+            {
+              "id": "3",
+              "name": {
+                "value": "grabadora"
+              }
+            },
+            {
+              "id": "4",
+              "name": {
+                "value": "cinta metrica"
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "botiquin"
+              }
+            },
+            {
+              "id": "6",
+              "name": {
+                "value": "bateria portatil"
+              }
+            },
+            {
+              "id": "7",
+              "name": {
+                "value": "linterna"
+              }
+            }
+          ],
+          "name": "Objetos"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ObjetoIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "objetoUno",
+              "type": "Objetos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1018942491771.518969223466"
+              }
+            },
+            {
+              "name": "objetoDos",
+              "type": "Objetos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.551885648469.1182233164197"
+              }
+            },
+            {
+              "name": "objetoTres",
+              "type": "Objetos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1018942491771.684815419216"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.551885648469.1182233164197",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime el segundo objeto"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1018942491771.518969223466",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime el primer objeto"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1018942491771.684815419216",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime el tercer objeto"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}
